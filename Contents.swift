@@ -13,14 +13,13 @@ var availableName: String?
 
 func smartAssigning(names: [String], statuses: [Bool], projects: [Int], tasks: [Int]) -> String {
     
-    for x in 0 ..< names.count {                        //compare people 1 through the next to last person
-        while statuses[x] == false {                           //if they're not on vacation
-            if statuses[x] == nil 
+    for x in 0 ..< names.count {                        						//compare people 1 through the next to last person
+        while statuses[x] == false {                           					//if they're not on vacation
+            if statuses[x] == nil {
         
-            
-            
-            for y in 1 ..< names.count {                            //to people 2 through the last person
-                    while statuses[y] == false {                            //if they're not on vacation
+
+            for y in 1 ..< names.count {                            			//to people 2 through the last person
+                    while statuses[y] == false {                            	//if they're not on vacation
                         if tasks[x] < tasks[y] {                                //if person 1 has less tasks
                             lowestWorkload = tasks[x]
                             availableName = names[x]
